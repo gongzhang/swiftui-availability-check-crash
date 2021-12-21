@@ -47,3 +47,15 @@ Thread 0 Crashed:
 4   libswiftCore.dylib            	0x00000001b0a77ab0 swift::swift_getTypeByMangledName(swift::MetadataRequest, __swift::__runtime::llvm::StringRef, void const* const*, std::__1::function<swift::TargetMetadata<swift::InProcess> const* (unsigned int, u... + 604 (CompatibilityOverride.def:153)
 ...
 ```
+
+Below is a clumsy workaround that prevents the crash on iOS 14.
+
+```swift
+if #available(iOS 15.0, *) {
+    Group {
+        if #available(iOS 15.0, *) {
+            Text("Hello").badge(1)
+        }
+    }
+}
+```
