@@ -1,4 +1,4 @@
-# swiftui-availablility-check-crash
+# swiftui-availability-check-crash
 
 This is a sample project that demonstrates a crash about SwiftUI availability check in Xcode 13.2.1.
 
