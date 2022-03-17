@@ -59,3 +59,13 @@ if #available(iOS 15.0, *) {
     }
 }
 ```
+
+## `FB9816443` Resolution
+
+Status: Potential fix identified - For a future OS update
+
+Workaround: Add following options to “Other Swift Flags” in the build settings:
+
+```
+-Xllvm -sil-disable-pass=alloc-stack-hoisting
+```
